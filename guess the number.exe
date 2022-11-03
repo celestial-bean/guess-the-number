@@ -39489,17 +39489,17 @@ int main() {
   std::cout << "Please guess it: ";
   std::cin >> guess;
 
-  while (guess != answer && tries != 2){
+  while (tries != 2){
     std::cout << "Wrong.\n"<<"Please guess it: ";
     std::cin >> guess;
+    if (guess == answer) {
+      std::cout << "You got it!\n";
+      break;
     tries++;
   }
 
-  if (guess == answer) {
-    std::cout << "You got it!\n";
-  }else{
     std::cout << "You failed. The number was " << answer<< ".\n";
-  }
+
 
   system("PAUSE");
   return 0;
